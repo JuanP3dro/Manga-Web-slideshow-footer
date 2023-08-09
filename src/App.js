@@ -9,6 +9,8 @@ import CoverModal from "./components/CoverModal";
 import { useLayoutEffect } from "react";
 import { getUser } from "./getData";
 import useStore from "./state";
+import Slideshow from "./components/slideshow";
+import Footer from "./components/footer"
 
 export default function App() {
   const { setUserData,userData } = useStore();
@@ -53,6 +55,7 @@ export default function App() {
   return (
     <>
       <NavBar />
+      <Slideshow/>
 
       <div className="app mt-[56px] flex relative">
         <OffCanvas />
@@ -63,6 +66,7 @@ export default function App() {
       <LoadingModel />
       <LogoutModel />
       <CoverModal />
+      <Footer/>
     </>
   );
 }
